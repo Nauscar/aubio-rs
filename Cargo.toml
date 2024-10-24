@@ -1,6 +1,6 @@
 [package]
 name = "aubio"
-version = "0.2.1"
+version = "0.2.2"
 description = "Safe bindings for aubio library to label music and sounds."
 categories = ["external-ffi-bindings", "multimedia::audio"]
 keywords = ["aubio", "audio", "processing", "recognition", "ffi"]
@@ -8,10 +8,10 @@ authors = ["K. <kayo@illumium.org>"]
 license = "GPL-3.0"
 readme = "README.md"
 repository = "https://github.com/katyo/aubio-rs"
-edition = "2018"
+edition = "2021"
 
 [dependencies.aubio-sys]
-version = "0.2.1"
+version = "0.2.2"
 path = "sys"
 
 [dependencies.log]
@@ -19,7 +19,7 @@ version = "0.4"
 optional = true
 
 [dev-dependencies.hound]
-version = "3.4"
+version = "3.5"
 
 [features]
 default = []

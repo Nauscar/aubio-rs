@@ -398,17 +398,6 @@ fn build_library(src_dir: &Path, lib_dir: &Path) {
     );
     build.files(
         [
-            "pitchshift_dummy.c",
-            "pitchshift_rubberband.c",
-            "rubberband_utils.c",
-            "timestretch_dummy.c",
-            "timestretch_rubberband.c",
-        ]
-        .iter()
-        .map(|src| src_dir.join("effects").join(src)),
-    );
-    build.files(
-        [
             "pitch.c",
             "pitchfcomb.c",
             "pitchmcomb.c",
@@ -475,33 +464,24 @@ fn build_library(src_dir: &Path, lib_dir: &Path) {
         .map(|src| src_dir.join("temporal").join(src)),
     );
     build.files(
-        [
-            "hist.c",
-            "log.c",
-            "parameter.c",
-            "scale.c",
-            "strutils.c",
-            "windll.c",
-        ]
-        .iter()
-        .map(|src| src_dir.join("utils").join(src)),
+        ["hist.c", "log.c", "parameter.c", "scale.c", "windll.c"]
+            .iter()
+            .map(|src| src_dir.join("utils").join(src)),
     );
     build.files(
         [
             "audio_unit.c",
             "ioutils.c",
             "sink.c",
-            //"sink_apple_audio.c",
-            //"sink_flac.c",
-            //"sink_sndfile.c",
-            //"sink_vorbis.c",
-            //"sink_wavwrite.c",
+            "sink_apple_audio.c",
+            "sink_sndfile.c",
+            "sink_wavwrite.c",
             "source.c",
-            //"source_apple_audio.c",
-            //"source_avcodec.c",
-            //"source_sndfile.c",
-            //"source_wavread.c",
-            //"utils_apple_audio.c",
+            "source_apple_audio.c",
+            "source_avcodec.c",
+            "source_sndfile.c",
+            "source_wavread.c",
+            "utils_apple_audio.c",
         ]
         .iter()
         .map(|src| src_dir.join("io").join(src)),
