@@ -384,7 +384,6 @@ impl<'a> FMat<'a, ()> {
      * - The `ptr` must not be `null`.
      * - The `ptr` should points to already initialized matrix data.
      */
-    #[allow(clippy::missing_safety_doc)] // TODO: Remove after closing https://github.com/rust-lang/rust-clippy/issues/5593
     pub unsafe fn from_raw_ptr(ptr: *const ffi::fmat_t) -> Self {
         FMat {
             fmat: *ptr,
